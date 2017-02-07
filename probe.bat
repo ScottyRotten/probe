@@ -10,7 +10,7 @@ echo " |_|                         "
 echo "          ver 0.1            "
 
 echo [*] Setup
-set /p DST=Set Output Directory ex: (C:\stuff):
+set /p OUTFILE=Set Output Directory ex: (C:\stuff):
 echo [+] Creating Output Directory at %OUTFILE%
 rmdir /S %OUTFILE%
 mkdir %OUTFILE%
