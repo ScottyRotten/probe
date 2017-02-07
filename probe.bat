@@ -8,7 +8,6 @@ echo " | .__/|_|  \___/|_.__/ \___|"
 echo " | |                         "
 echo " |_|                         "
 echo "          ver 0.1            "
-echo DONE.
 echo [*] Setup
 set /p OUTFILE=Set Output Directory ex: (C:\stuff):
 echo [+] Creating Output Directory at %OUTFILE%
@@ -25,7 +24,7 @@ echo [>] Grabbing Tasklist
 Tasklist /v >> %OUTFILE%
 echo [>] Grabbing Network Sessions
 nbtstat -S >> %OUTFILE%
-echo [>] Grabbing TCP/IP Connections & PIDS
+echo [>] Grabbing TCP/IP Connections / PIDS
 netstat -ano >> %OUTFILE%
 echo [*******************************************************************] >> %OUTFILE%
 echo [*] USERS AND SHARES >> %OUTFILE%
