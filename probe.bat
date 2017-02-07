@@ -8,7 +8,7 @@ echo " | .__/|_|  \___/|_.__/ \___|"
 echo " | |                         "
 echo " |_|                         "
 echo "          ver 0.1            "
-
+echo DONE.
 echo [*] Setup
 set /p OUTFILE=Set Output Directory ex: (C:\stuff):
 echo [+] Creating Output Directory at %OUTFILE%
@@ -45,7 +45,6 @@ Reg query HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnceEx >> %OUTFILE%
 echo [*******************************************************************] >> %OUTFILE%
 echo [>] Grabbing Scheduled Tasks
 echo [*] SCHEDULED TASKS >> %OUTFILE%
-at >> %OUTFILE%
 schtasks >> %OUTFILE%
 echo [*******************************************************************] >> %OUTFILE%
 echo [*] FILESYSTEM >> %OUTFILE%
