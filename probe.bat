@@ -50,5 +50,10 @@ schtasks >> %OUTFILE%
 ECHO [-] Listing Files Larger than 100MB.
 ECHO [*] FILESYSTEM >> %OUTFILE%probe_output\files.txt
 forfiles /S /M * /C "cmd /c if @fsize geq 104857600 ECHO @file  @path" >> %OUTFILE%probe_output\files.txt
+ECHO [-] Querying Logs.
+ECHO [*] SECURITY / SYSTEM / APPLICATION LOGS >> %OUTFILE%prob_output\logs.txt
+cscript %SYSTEMroot%\system32\eventquery.vbs /L security >> %OUTFILE%prob_output\logs.txt
+cscript %SYSTEMroot%\system32\eventquery.vbs /L system >> %OUTFILE%prob_output\logs.txt
+cscript %SYSTEMroot%\system32\eventquery.vbs /L application >> %OUTFILE%prob_output\logs.txt
 ECHO [*] Complete
 pause
